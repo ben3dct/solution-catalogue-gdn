@@ -87,7 +87,7 @@ const LoginPage = ({ updateUser, user }) => {
 						onClick={signIn}
 						disableElevation={true}
 						sx={{ height: "300px", width: "300px", borderRadius: "10" }}
-						variant='contained'
+						variant='outlined'
 						fullWidth>
 						log in
 					</Button>
