@@ -13,20 +13,6 @@ const Home = ({ user }) => {
 	const [selectedItem, setSelectedItem] = React.useState(null);
 	const [filterValue, setFilterValue] = React.useState(null);
 	const [filterResult, setFilterResult] = React.useState(data);
-	const [hasUser, setUser] = React.useState(false);
-	function updateSelectedItem(id) {
-		if (id === selectedItem) {
-			return {
-				fontWeight: "bolder",
-				border: "2px solid black",
-				boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px",
-				marginTop: "5px",
-				marginBottom: "15px",
-			};
-		} else {
-			return {};
-		}
-	}
 
 	React.useEffect(() => {
 		if (filterValue) {
