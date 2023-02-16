@@ -8,6 +8,7 @@ import { Auth } from "aws-amplify";
 import { data } from "./data";
 import * as React from "react";
 import Header from "../components/Header.component";
+import Solution from "../components/Solution.component";
 const Home = ({ user }) => {
 	const [selectedItem, setSelectedItem] = React.useState(null);
 	const [filterValue, setFilterValue] = React.useState(null);
@@ -55,18 +56,7 @@ const Home = ({ user }) => {
 			</div>
 			<div className='flex-child body'>
 				{filterResult.map((datum) => {
-					return (
-						<div
-							style={updateSelectedItem(datum.id)}
-							onClick={() => {
-								setSelectedItem(datum.id);
-								updateSelectedItem(datum.id);
-							}}
-							className='map-item'
-							key={datum.id}>
-							{datum.id}
-						</div>
-					);
+					return <Solution solution={datum} />;
 				})}
 			</div>
 			<div className='flex-child footer'>
