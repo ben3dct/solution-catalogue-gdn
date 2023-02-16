@@ -27,6 +27,8 @@
 	padding-left: 10px;
 	padding-right: 4px;
 	padding-bottom: 0;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
 }
 ::-webkit-scrollbar {
 	-webkit-appearance: none;
@@ -88,6 +90,6 @@
 
 .footer {
 	margin-bottom: 0;
-	margin-top: 0;
+	margin-top: 0 !important;
 	border-top: 1px dotted black;
 }
