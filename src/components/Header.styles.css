@@ -1,0 +1,30 @@
+/** @format */
+
+.header-component-main {
+	display: flex;
+	border: 1px solid red;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+.grouping {
+	display: flex;
+	align-items: center;
+}
+.logo {
+	height: 100px;
+	width: 100px;
+	background-image: url(../resources/globaldatanet\ new\ Logo.png);
+	background-size: 100px 100px;
+	border-radius: 10px;
+}
+.heading {
+	justify-self: flex-start !important;
+	font-size: 40px;
+}
+.logobtn {
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+}

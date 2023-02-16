@@ -7,10 +7,12 @@ import "./Home.styles.css";
 import { Auth } from "aws-amplify";
 import { data } from "./data";
 import * as React from "react";
+import Header from "../components/Header.component";
 const Home = ({ user }) => {
 	const [selectedItem, setSelectedItem] = React.useState(null);
 	const [filterValue, setFilterValue] = React.useState(null);
 	const [filterResult, setFilterResult] = React.useState(data);
+	const [hasUser, setUser] = React.useState(false);
 	function updateSelectedItem(id) {
 		if (id === selectedItem) {
 			return {
@@ -33,12 +35,15 @@ const Home = ({ user }) => {
 			setFilterResult(data);
 		}
 	}, [filterValue]);
-	if (!Auth.currentAuthenticatedUser()) {
+
+	if (!user) {
 		return <Navigate to='/login' />;
 	}
 	return (
 		<div className='primary-flex'>
-			<div className='flex-child header'>header placeholder</div>
+			<div className='flex-child header'>
+				<Header />
+			</div>
 			<div className='flex-child filters'>
 				<input
 					placeholder='search id'
