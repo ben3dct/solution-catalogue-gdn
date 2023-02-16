@@ -3,9 +3,18 @@
 export const data = [
 	{
 		id: 1,
+		title: "Compliance Dashboards",
+		description:
+			"Creates a Lambda that provides compliance dashboards as HTML snippets. Organizations and Config are used as data sources.",
+		author: "David Krohn",
+		tags: "Security",
 	},
 	{
 		id: 2,
+		title: "Handling file hash as base64",
+		description: "Read file and get SHA256 checksum.",
+		author: "Stephan Huber",
+		tags: "Storage",
 	},
 	{
 		id: 3,

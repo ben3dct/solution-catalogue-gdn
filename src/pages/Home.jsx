@@ -42,7 +42,14 @@ const Home = ({ user }) => {
 			</div>
 			<div className='flex-child body'>
 				{filterResult.map((datum) => {
-					return <Solution solution={datum} />;
+					return (
+						<Solution
+							solution={datum}
+							updateSelectedItem={(val) => {
+								setSelectedItem(val);
+							}}
+						/>
+					);
 				})}
 			</div>
 			<div className='flex-child footer'>
