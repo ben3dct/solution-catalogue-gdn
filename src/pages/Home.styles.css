@@ -67,10 +67,7 @@
 	overflow: hidden;
 	text-align: center;
 }
-.title {
-	width: 20%;
-	overflow: hidden;
-}
+
 .author,
 .tags {
 	width: 10%;

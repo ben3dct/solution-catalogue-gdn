@@ -10,7 +10,9 @@ import awsmobile from "./aws-exports";
 import Button from "@mui/material/Button";
 import AuthPage from "./pages/auth/AuthPage";
 import { useNavigate } from "react-router-dom";
+import DashboardPage from "./pages/dashboard/DashboardPage";
 import * as React from "react";
+import { Dashboard } from "@mui/icons-material";
 
 Amplify.configure({
 	...awsmobile,
@@ -56,7 +58,16 @@ function App() {
 			<Routes>
 				<Route
 					path='/'
-					element={!loader ? <Home user={user} /> : <h1>loading</h1>}
+					element={
+						!loader ? (
+							<DashboardPage
+								user={user}
+								navigate={navigate}
+							/>
+						) : (
+							<h1>loading</h1>
+						)
+					}
 				/>
 				<Route
 					path='/login'
