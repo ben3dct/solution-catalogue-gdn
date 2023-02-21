@@ -13,6 +13,10 @@ import { useNavigate } from "react-router-dom";
 import DashboardPage from "./pages/dashboard/DashboardPage";
 import * as React from "react";
 import { Dashboard } from "@mui/icons-material";
+import { createSolution } from "./graphql/mutations";
+import { API, graphqlOperation } from "aws-amplify";
+
+const Solution = { id: 1, title: "test solution", description: "this is a test" };
 
 Amplify.configure({
 	...awsmobile,
@@ -45,6 +49,9 @@ function App() {
 				console.log("no authenticated user");
 			});
 	}
+
+	API.graphql(graphqlOperation(createSolution, { input: Solution }));
+
 	React.useEffect(() => {
 		getUser();
 	}, []);
