@@ -5,8 +5,56 @@
 input AMPLIFY {
 	globalAuthRule: AuthRule = { allow: public }
 } # FOR TESTING ONLY!
-type Solution @model {
-	id: ID!
-	title: String!
+type OtherResources {
+	title: String
+	link: String
+	category: String
+}
+
+type Category {
+	governance: Boolean
+	devops: Boolean
+	containers: Boolean
+	serverless: Boolean
+	migration: Boolean
+	networking: Boolean
+	security: Boolean
+	storage: Boolean
+	messaging_streaming: Boolean
+	iot: Boolean
+	mlops: Boolean
+}
+
+type Language {
+	cpp: Boolean
+	net: Boolean
+	go: Boolean
+	java: Boolean
+	js: Boolean
+	kotlin: Boolean
+	php: Boolean
+	py: Boolean
+	ruby: Boolean
+	swift: Boolean
+}
+
+type Features {
+	name: String
 	description: String
+	generalization: String
+	status: String
+	assignee: String
+}
+
+type Solution @model {
+	id: Int
+	title: String
+	other_resources: [OtherResources]
+	gh_repo: [String]
+	category: Category
+	services: [String]
+	IaC_Tools: [String]
+	language: Language
+	features: [Features]
+	owners: [String]
 }

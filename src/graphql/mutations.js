@@ -9,7 +9,47 @@ export const createSolution = /* GraphQL */ `
     createSolution(input: $input, condition: $condition) {
       id
       title
-      description
+      other_resources {
+        title
+        link
+        category
+      }
+      gh_repo
+      category {
+        governance
+        devops
+        containers
+        serverless
+        migration
+        networking
+        security
+        storage
+        messaging_streaming
+        iot
+        mlops
+      }
+      services
+      IaC_Tools
+      language {
+        cpp
+        net
+        go
+        java
+        js
+        kotlin
+        php
+        py
+        ruby
+        swift
+      }
+      features {
+        name
+        description
+        generalization
+        status
+        assignee
+      }
+      owners
       createdAt
       updatedAt
     }
@@ -23,7 +63,47 @@ export const updateSolution = /* GraphQL */ `
     updateSolution(input: $input, condition: $condition) {
       id
       title
-      description
+      other_resources {
+        title
+        link
+        category
+      }
+      gh_repo
+      category {
+        governance
+        devops
+        containers
+        serverless
+        migration
+        networking
+        security
+        storage
+        messaging_streaming
+        iot
+        mlops
+      }
+      services
+      IaC_Tools
+      language {
+        cpp
+        net
+        go
+        java
+        js
+        kotlin
+        php
+        py
+        ruby
+        swift
+      }
+      features {
+        name
+        description
+        generalization
+        status
+        assignee
+      }
+      owners
       createdAt
       updatedAt
     }
@@ -37,7 +117,47 @@ export const deleteSolution = /* GraphQL */ `
     deleteSolution(input: $input, condition: $condition) {
       id
       title
-      description
+      other_resources {
+        title
+        link
+        category
+      }
+      gh_repo
+      category {
+        governance
+        devops
+        containers
+        serverless
+        migration
+        networking
+        security
+        storage
+        messaging_streaming
+        iot
+        mlops
+      }
+      services
+      IaC_Tools
+      language {
+        cpp
+        net
+        go
+        java
+        js
+        kotlin
+        php
+        py
+        ruby
+        swift
+      }
+      features {
+        name
+        description
+        generalization
+        status
+        assignee
+      }
+      owners
       createdAt
       updatedAt
     }

@@ -6,7 +6,47 @@ export const getSolution = /* GraphQL */ `
     getSolution(id: $id) {
       id
       title
-      description
+      other_resources {
+        title
+        link
+        category
+      }
+      gh_repo
+      category {
+        governance
+        devops
+        containers
+        serverless
+        migration
+        networking
+        security
+        storage
+        messaging_streaming
+        iot
+        mlops
+      }
+      services
+      IaC_Tools
+      language {
+        cpp
+        net
+        go
+        java
+        js
+        kotlin
+        php
+        py
+        ruby
+        swift
+      }
+      features {
+        name
+        description
+        generalization
+        status
+        assignee
+      }
+      owners
       createdAt
       updatedAt
     }
@@ -22,7 +62,10 @@ export const listSolutions = /* GraphQL */ `
       items {
         id
         title
-        description
+        gh_repo
+        services
+        IaC_Tools
+        owners
         createdAt
         updatedAt
       }
